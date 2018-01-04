@@ -1,8 +1,10 @@
 # edx-nodejs-cvs2json
-Uses following modules:
+
+### Uses following modules: ###
 - path
 - fs
-Extra modules required:
+
+### Extra modules required: ###
 - cvstojson
 - request
 

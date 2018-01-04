@@ -1,0 +1,17 @@
+{
+  "name": "cvs2json",
+  "version": "1.0.0",
+  "main": "cvs2json.js",
+  "dependencies": {
+    "csvtojson": "1.1.9",
+    "request": "2.83.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,15 +1,16 @@
+const request = require('request')
 const path    = require('path')
 const csv     = require('csvtojson')
 const fs      = require('fs')
 
 const outFile = path.join(__dirname, 'customer-data.json')
-const csvFile = path.join(__dirname, 'customer-data.csv')
+const url = 'https://prod-edxapp.edx-cdn.org/assets/courseware/v1/07d100219da1a726dad5eddb090fa215/asset-v1:Microsoft+DEV283x+2T2017+type@asset+block/customer-data.csv'
 
 const csv2JSON = (inData) => { 
 	let json = []
 
 	csv()
-	.fromFile(csvFile)
+	.fromStream(request.get(inData))
 
 	.on('json',(jsonObj) => {
 	    json.push(jsonObj)
@@ -23,4 +24,4 @@ const csv2JSON = (inData) => {
 	})
 }
 
-csv2JSON()
+csv2JSON(url)
